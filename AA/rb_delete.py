@@ -1,6 +1,8 @@
 import sys
 
 # Node creation
+
+
 class Node:
     def __init__(self, item):
         self.item = item
@@ -10,6 +12,8 @@ class Node:
         self.color = 1
 
 # Red-Black Tree implementation
+
+
 class RedBlackTree:
     def __init__(self):
         self.TNULL = Node(0)
@@ -107,7 +111,7 @@ class RedBlackTree:
         else:
             u.parent.right = v
         v.parent = u.parent
-           
+
     # Node deletion
     def delete_node_helper(self, node, key):
         z = self.TNULL
@@ -196,7 +200,7 @@ class RedBlackTree:
             print(str(node.item) + "(" + s_color + ")")
             self.__print_helper(node.left, indent, False)
             self.__print_helper(node.right, indent, True)
-    
+
     def preorder(self):
         self.pre_order_helper(self.root)
 
@@ -304,6 +308,7 @@ class RedBlackTree:
 
     def print_tree(self):
         self.__print_helper(self.root, "", True)
+
 
 if __name__ == "__main__":
     bst = RedBlackTree()
