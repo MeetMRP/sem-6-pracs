@@ -19,6 +19,7 @@ class Graph:
         parent = [-1] * self.ROW
         max_flow = 0
         while True:
+            print('Current flow:', max_flow)
             self.visited = [False] * self.ROW
             if not self.dfs(source, sink, parent):
                 break 
